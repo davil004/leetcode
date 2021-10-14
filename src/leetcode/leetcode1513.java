@@ -9,7 +9,7 @@ public class leetcode1513 {
 	class Solution {
 		public int numSub(String s) {
 			long ans = 0;
-			String[] temp = s.split("0");
+			String[] temp = s.split("0"); //以"0"為基準分割字串
 
 			for (int i = 0; i < temp.length; i++) {
 
