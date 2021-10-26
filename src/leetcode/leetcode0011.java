@@ -2,7 +2,7 @@ package leetcode;
 
 public class leetcode0011 {
 
-	class Solution {
+	class Solution1 {
 		public int maxArea(int[] height) {
 			int len = height.length;
 			int ans = 0;
@@ -16,6 +16,28 @@ public class leetcode0011 {
 
 					}
 				}
+			}
+			return ans;
+		}
+	}
+
+	class Solution2 {
+		public int maxArea(int[] height) {
+			int len = height.length;
+			int ans = 0;
+			int i = 0;
+			int j = len - 1;
+
+			while (i < j) {
+				int temp = 0;
+				temp = (j - i) * Math.min(height[i], height[j]);
+				ans = Math.max(ans, temp);
+				if (height[i] > height[j]) {
+					j--;
+				} else {
+					i++;
+				}
+
 			}
 			return ans;
 		}
