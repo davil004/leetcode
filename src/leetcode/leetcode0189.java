@@ -22,9 +22,7 @@ public class leetcode0189 {
 
 			}
 
-			for (int j = 0; j < nums.length; j++) {
-				nums[j] = ans[j];
-			}
+			System.arraycopy(ans, 0, nums, 0, len + 1);
 		}
 	}
 
